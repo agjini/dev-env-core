@@ -37,8 +37,6 @@ vi vars.yml
 ./install.sh
 ```
 
-After install you can add a `~/.ssh/config_perso` file with personal ssh aliases. It will be automatically included in `~/.ssh/config`.
-
 ## Credits
 
 This tool is greatly inspired from
