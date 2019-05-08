@@ -1,0 +1,15 @@
+---
+
+- file: path=~/.i3 state=directory
+- file: path=~/.bin state=directory
+
+- blockinfile:
+    block="{{ lookup('template', 'templates/.bashrc') }}"
+    dest=~/.bashrc
+
+- template: src=templates/.i3/config dest=~/.i3/
+- synchronize: src=templates/.bin/ dest=~/.bin/
+- template: src=templates/.bash_aliases dest=~/.bash_aliases
+- template: src=templates/.gitconfig dest=~/.gitconfig
+- template: src=templates/.tmux.conf dest=~/.tmux.conf
+- template: src=templates/.Xresources dest=~/.Xresources

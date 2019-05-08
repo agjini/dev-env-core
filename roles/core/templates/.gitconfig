@@ -1,0 +1,65 @@
+
+[color]
+    ui = true
+[color "status"]
+    branch = magenta
+    untracked = cyan
+    unmerged = yellow
+[alias]
+    last = cat-file commit HEAD
+    cm = commit -a -m\"refactor(): dead code\"
+    ca = commit -a -m
+    format = commit -a -m\"refactor(): format\"
+    rename = commit -a -m\"refactor(): rename\"
+    duplication = commit -a -m\"refactor(): remove duplication\"
+    st = status -s
+    co = checkout
+    ci = commit
+    br = branch -a -v
+    rb = rebaseé"&é&é&é"
+    rbi = rebase -i
+    force = push --force-with-lease
+    log-stats = log --stat
+    pretty-log = log --oneline --date-order --graph --all --decorate
+    topo-log = log --oneline --graph --all --decorate
+    t = log --oneline --graph --all --decorate --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' -15
+    tt = log --oneline --graph --all --decorate --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset'
+    diff = diff -p --stat
+    standup = log --since yesterday --oneline --author {{email}}
+    lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    lastchanges = log --pretty=oneline --abbrev-commit --graph ORIG_HEAD.. --stat --no-merges
+    lastdiff = diff HEAD^ HEAD
+    lastdiffword = diff --word-diff HEAD^ HEAD
+    tags = !git for-each-ref refs/tags --sort=-taggerdate --format='%(refname)' --count=$1
+    lasttag = describe --tags --abbrev=0
+    undo = reset --soft HEAD^
+    who = shortlog -sne
+    amend = commit --amend
+    clg = log master..develop --oneline --all --no-merges develop --pretty=tformat:'* `%h`: %s'
+    aliases = !git config --list | grep 'alias\\.' | awk -F'[.=]' '{printf(\"%-15s %s\\n\",$2,$3)}' | sort
+
+[core]
+    editor = vim
+    autocrlf = false
+    safecrlf = true
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[user]
+    email = augustin.gjini@pm.me
+    name = agjini
+
+[push]
+    default = tracking
+
+[pull]
+    rebase = true
+
+[rerere]
+        enabled = true
+
+[include]
+path = ~/.gitconfig.local

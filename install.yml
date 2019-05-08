@@ -1,0 +1,8 @@
+---
+# This playbook install the dev environment
+
+- hosts: localhost
+  roles:
+     - core
+  vars_files:
+    - vars.yml

@@ -1,0 +1,6 @@
+
+- name: Install minimal tools ...
+  pacman: 
+    name: tmux, httpie, jq
+    state: present
+  become: yes

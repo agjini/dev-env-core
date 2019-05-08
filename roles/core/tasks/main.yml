@@ -1,0 +1,6 @@
+
+- name: Apply dotfiles templates
+  import_tasks: dotfiles.yml
+
+- name: Install minimal tools
+  import_tasks: minimal_tools.yml
