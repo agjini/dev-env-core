@@ -1,6 +1,6 @@
 ## What is it ?
 
-**_dev-env_** is a tool that setup a full stack development environment on a linux based OS.
+**_dev-env-core_** is a tool that setup a full stack development environment on a linux based OS.
 
 The core version is a minimalist non intrusive version :
 1. It apply a minimalist set of dotfiles templates
