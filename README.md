@@ -1,16 +1,16 @@
 ## What is it ?
 
-**_dev-env-core_** is a tool that setup a full stack development environment on a linux based OS.
+**_dev-env-core_** is a tool that setup a development environment on a linux based OS.
 
 The core version is a minimalist non intrusive version :
-1. It apply a minimalist set of dotfiles templates
+1. It applies a minimalist set of dotfiles templates (i3, tmux, git, bash aliases, git bash prompt, bash completions)
 1. It install only a minimal set of tools on system : tmux
 
 #### Supported systems
 
-- Manjaro
+- Manjaro i3
 
-The tools has been tested on `Manjaro i3`
+The tools has been tested on `Manjaro Linux` i3 distribution
 
 ## Install prerequisites
 
