@@ -14,9 +14,6 @@ alias q='~/applications/q'
 alias test_and_push='mvn clean install && git push'
 alias dc=docker-compose
 
-alias hotfix="git co develop && git pull && git co master && git pull && git remote prune origin && mvn gitflow:hotfix-start"
-alias release="git co develop && git pull && git co master && git pull && git remote prune origin && mvn gitflow:release-start"
-
 function clone_group {
     if [ $# -ne 2 ]
     then
