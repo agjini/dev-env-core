@@ -1,6 +1,8 @@
 #!/bin/sh
 
-xrandr --output eDP1 --auto --primary \
- --output DP1-1 --off \
- --output DP1-2 --off
+xrandr --output eDP1 --auto --primary
+
+xrandr --output DP1-1 --off
+
+xrandr --output DP1-2 --off
 
