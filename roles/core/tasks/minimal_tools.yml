@@ -1,6 +1,6 @@
 
 - name: Install minimal tools ...
   pacman: 
-    name: tmux, httpie, jq
+    name: tmux, httpie, jq, bash-git-prompt
     state: present
   become: yes
