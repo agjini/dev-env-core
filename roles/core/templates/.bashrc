@@ -22,7 +22,5 @@ fi
 
 source ~/.bash_aliases
 
-source /usr/share/nvm/init-nvm.sh
 
 source /usr/share/git/completion/git-completion.bash
-source /usr/share/bash-completion/completions/docker
