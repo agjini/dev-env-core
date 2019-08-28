@@ -49,8 +49,8 @@
     status = auto
 
 [user]
-    email = augustin.gjini@pm.me
-    name = agjini
+    email = {{ email }}
+    name = {{ username }}
 
 [push]
     default = tracking
