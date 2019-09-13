@@ -85,10 +85,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+m move right
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+m move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -139,6 +139,8 @@ bindsym $mod+Ctrl+Left workspace prev
 
 bindsym $mod+Shift+i move workspace to output left
 bindsym $mod+Shift+o move workspace to output right
+bindsym $mod+Shift+p move workspace to output up
+bindsym $mod+Shift+m move workspace to output down
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -229,6 +231,8 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r exec "nitrogen --restore && i3-msg restart"
+
+bindsym $mod+Shift+z exec "~/.bin/switch.sh; nitrogen --restore && i3-msg restart"
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
