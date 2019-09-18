@@ -13,7 +13,7 @@ alias mvnPurgeSnapshots='find ~/.m2/repository/ -depth -type d -name "*SNAPSHOT"
 alias q='~/applications/q'
 alias test_and_push='mvn clean install && git push'
 alias dc=docker-compose
-alias pp=git stash && git pull && git push && git stash pop
+alias pp='git stash && git pull && git push && git stash pop'
 
 function clone_group {
     if [ $# -ne 2 ]
