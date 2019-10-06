@@ -13,3 +13,4 @@
 - template: src=templates/.gitconfig dest=~/.gitconfig
 - template: src=templates/.tmux.conf dest=~/.tmux.conf
 - template: src=templates/.Xresources dest=~/.Xresources
+- template: src=templates/.vimrc dest=~/.vimrc
