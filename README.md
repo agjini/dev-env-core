@@ -12,5 +12,7 @@ The core version is a minimalist non intrusive version :
 
 The tools has been tested on `Manjaro Linux` i3 distribution
 
+## Getting started
+
 1. [Install on Manjaro](./doc/install.md)
 2. [Print the cheat sheet](./doc/cheatsheet.md)
