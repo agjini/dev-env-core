@@ -2,49 +2,49 @@
 
 | shortcut | command |
 |---|---|
-|`win + d`|display menu to launch an app |
-|`win + 0`| shutdown menu (logout, lock, rebbot, shutdown) |
-|`win + d` | display menu to launch an app |
-|`win + shift + q` | close focused window |
-|`win + <num>` | got to the `<num>` workspace |
-|`win + shift + <num>` | move focused window into the `<num>` workspace |
-|`win + shift + i` | move current workspace to left screen |
-|`win + shift + o` | move current workspace to right screen |
-|`win + shift + p` | move current workspace to top screen |
-|`win + shift + m` | move current workspace to bottom screen |
-|`win + f` | toggle fullscreen on current window  |
+|`Win` + `d`|display menu to launch an app |
+|`Win` + `0`| shutdown menu (logout, lock, rebbot, shutdown) |
+|`Win` + `d` | display menu to launch an app |
+|`Win` + `Shift` + `q` | close focused window |
+|`Win` + `<num>` | got to the `<num>` workspace |
+|`Win` + `Shift` + `<num>` | move focused window into the `<num>` workspace |
+|`Win` + `Shift` + `i` | move current workspace to left screen |
+|`Win` + `Shift` + `o` | move current workspace to right screen |
+|`Win` + `Shift` + `p` | move current workspace to top screen |
+|`Win` + `Shift` + `m` | move current workspace to bottom screen |
+|`Win` + `f` | toggle fullscreen on current window  |
 
 # Tmux (in the terminal)
 
 | shortcut | command |
 |---|---|
-|`shift + 🠇` | open a new terminal tab |
-|`shift + 🠄` | got to previous tab |
-|`shift + 🠦` | got to next tab |
-|`ctrl + x` + `page up` | vi in terminal buffer |
+|`Shift` + `🠇` | open a new terminal tab |
+|`Shift` + `🠄` | got to previous tab |
+|`Shift` + `🠦` | got to next tab |
+|`Ctrl` + `x` then `page up` | vi in terminal buffer (`q` to quit) |
 
 # Terminal
 
 | shortcut | command |
 |---|---|
-|`ctrl + d` | exit current bash session |
-|`ctrl + c` | stop or cancel current command |
-|`ctrl + r` | search in command history |
-|`alt + c` | search a relative directory and go into |
-`ctrl + t` | search a relative file or directory and complete current command |
-|`ctrl + a` | go to the line start |
-|`ctrl + e` | got to the line end |
-|`ctrl + w` | delete previous word |
-|`ctrl + 🠄` | go to the previous word |
-|`ctrl + 🠦` | go to the next word |
+|`Ctrl` + `d` | exit current bash session |
+|`Ctrl` + `c` | stop or cancel current command |
+|`Ctrl` + `r` | search in command history |
+|`Alt` + `c` | search a relative directory and go into |
+`Ctrl` + `t` | search a relative file or directory and complete current command |
+|`Ctrl` + `a` | go to the line start |
+|`Ctrl` + `e` | got to the line end |
+|`Ctrl` + `w` | delete previous word |
+|`Ctrl` + `🠄` | go to the previous word |
+|`Ctrl` + `🠦` | go to the next word |
 
 # Intellij
 
 | shortcut | command |
 |---|---|
-|`ctrl + shift + a` | show all commands (raccourci ultime) |
-|`ctrl + d` | duplicate current line |
-`alt + j` | select next occurence of current word (multicursor)|
+|`Ctrl` + `Shift` + `a` | show all commands (raccourci ultime) |
+|`Ctrl` + `d` | duplicate current line |
+`Alt` + `j` | select next occurence of current word (multicursor)|
 
 # Git
 
