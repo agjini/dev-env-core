@@ -44,9 +44,12 @@
 |---|---|
 |`Ctrl` + `Shift` + `a` | show all commands (raccourci ultime) |
 |`Ctrl` + `d` | duplicate current line |
+|`Ctrl` + `y` | delete current line |
 |`Alt` + `j` | select next occurence of current word (multicursor)|
 |`Ctrl` + `n` | search for a class |
 |`Ctrl` + `Shift` + `n` | search for a file |
+|`Ctrl` + `z` | undo |
+|`Ctrl` + `Shift` + `z` | redo |
 
 # Git
 
