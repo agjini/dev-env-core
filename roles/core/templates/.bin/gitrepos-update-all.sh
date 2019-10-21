@@ -31,7 +31,7 @@ log() {
 
     printf "%-70s $branchformat $color\n" "$@"
 
-  ) 200>"/var/lock/.$(basename "$0").lock"
+  ) 200>"/tmp/grua-lock/.$(basename "$0").lock"
 }
 log_dirty(){ log "$PF_JAUNE" "$@" "DIRTY"; }
 log_updated(){ log "$PF_VERT" "$@" "UPDATED"; }
@@ -42,7 +42,7 @@ log_error(){
     printf "%-70s %-${BRANCH_WIDTH}s $PF_ROUGE %s\n" "$1" "$2" "$3";
     printf "\n %s \n" "$4";
     printf '%*s\n' "${COLUMNS:-$SCREEN_COLS}" '' | tr ' ' =
-  ) 200>"/var/lock/.$(basename "$0").lock"
+  ) 200>"/tmp/grua-lock/.$(basename "$0").lock"
 }
 
 _update_git_repo() {
@@ -90,6 +90,8 @@ _cleanup() {
 
 if [[ "${BASH_SOURCE[0]}" = "$0" ]]; then
   readonly START_TIME=$(date +%s%3N)
+
+  mkdir -p /tmp/grua-lock
 
   export fifo; fifo=$(mktemp -u)
   mkfifo "$fifo"
