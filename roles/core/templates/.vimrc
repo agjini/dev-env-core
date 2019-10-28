@@ -1,1 +1,3 @@
 set relativenumber
+
+syntax on
