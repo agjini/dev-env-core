@@ -13,9 +13,18 @@
     replace: 'CheckAURUpdates'
   become: yes
 
+- name: Remove unwanted tools ...
+  shell: pamac remove --no-confirm urxvt urxvt-perls
+  become: yes
+  ignore_errors: yes
+
 - name: Install minimal tools ...
-  shell: pamac install --no-confirm tmux httpie jq
+  shell: pamac install --no-confirm tmux httpie jq alacritty
   become: yes
 
 - name: Install minimal tools from AUR...
   shell: pamac build --no-confirm bash-git-prompt
+
+- name: Replace  minimal tools ...
+  shell: rm /usr/bin/terminal && ln -s /usr/bin/alacritty /usr/bin/terminal
+  become: yes

@@ -8,6 +8,7 @@
     dest=~/.bashrc
 
 - template: src=templates/.i3/config dest=~/.i3/
+- template: src=templates/alacritty.yml dest=~/.config/alacritty
 - synchronize: src=templates/.bin/ dest=~/.bin/
 - template: src=templates/.bash_aliases dest=~/.bash_aliases
 - template: src=templates/.gitconfig dest=~/.gitconfig
