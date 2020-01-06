@@ -11,7 +11,7 @@ pacman -S ansible
 
 #### Fill your variables
 
-Fills the variables in vars.yml
+Fills the variables in vars.yml (In the project directory)
 
 ```bash
 cp vars_example.yml vars.yml
