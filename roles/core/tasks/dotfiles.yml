@@ -8,6 +8,7 @@
     dest=~/.bashrc
 
 - template: src=templates/dotnet.sh dest=/etc/profile.d
+  become: yes
 
 - template: src=templates/.i3/config dest=~/.i3/
 - template: src=templates/alacritty.yml dest=~/.config/alacritty/
