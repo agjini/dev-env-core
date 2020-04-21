@@ -4,3 +4,7 @@
 
 - name: Install minimal tools
   import_tasks: minimal_tools.yml
+
+- name: Install egpu
+  import_tasks: egpu.yml
+  when: egpu == true

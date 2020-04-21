@@ -2,3 +2,6 @@
 # Git user information
 email: "augustin.gjini@gmail.com"
 username: "Augustin Gjini"
+
+# Enable following variable to configure nvidia external GPU
+# egpu: false
