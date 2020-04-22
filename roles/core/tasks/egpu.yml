@@ -1,11 +1,10 @@
 
-
 - name: "Install egpu : xorg 20-nvidia.conf"
   template: src=templates/egpu/20-nvidia.conf dest=/etc/X11/xorg.conf.d/
   become: yes
 
 - name: "Install egpu : xorg 01-laptop.conf"
-  template: src=templates/egpu/01-laptop.conf dest=/etc/X11/inactive/
+  template: src=templates/egpu/01-laptop.conf dest=/etc/X11/xorg.conf.d/inactive/
   become: yes
 
 - name: "Install egpu : gpuswitch script"
