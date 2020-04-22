@@ -5,6 +5,9 @@ isDocked() {
     echo $?
 }
 
+# Is here to force to rediscover available displays
+xrandr -q
+
 if [ "$(isDocked)" = "1" ]; then
 
     echo "docked"
