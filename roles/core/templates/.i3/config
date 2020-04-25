@@ -134,6 +134,7 @@ bindsym $mod+a focus parent
 # bindsym $mod+minus scratchpad show
 
 #navigate workspaces next / previous
+bindsym $mod+Tab workspace next
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
