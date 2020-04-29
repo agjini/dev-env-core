@@ -8,7 +8,7 @@ getFirstExternalMonitor() {
     xrandr | grep " connected " | awk '{ print$1 }' | grep -v "eDP1" | head -1
 }
 
-if [ "$(getActiveMonitorsCount)" > 0 ]; then
+if [ "$(getActiveMonitorsCount)" -gt 0 ]; then
 
     if [ "$(getActiveMonitorsCount)" == 1 ]; then
 
