@@ -1,4 +1,9 @@
 
+- name: Include vars of theme
+  include_vars:
+    file: theme/{{ theme }}.yml
+    name: theme
+
 - name: Apply dotfiles templates
   import_tasks: dotfiles.yml
 

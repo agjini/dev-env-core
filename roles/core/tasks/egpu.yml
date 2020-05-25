@@ -15,6 +15,6 @@
   template: src=templates/egpu/gpuswitch.service dest=/etc/systemd/system/
   become: yes
 
-- name: "Install egpu : enable gpuswitch.service"
-  shell: systemctl enable gpuswitch.service
-  become: yes
+# - name: "Install egpu : enable gpuswitch.service"
+#   shell: systemctl enable gpuswitch.service
+#   become: yes

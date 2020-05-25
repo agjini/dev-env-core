@@ -10,6 +10,9 @@
 - template: src=templates/dotnet.sh dest=/etc/profile.d
   become: yes
 
+- template: src=templates/slick-greeter.conf dest=/etc/lightdm/slick-greeter.conf
+  become: yes
+  
 - template: src=templates/.i3/config dest=~/.i3/
 - template: src=templates/alacritty.yml dest=~/.config/alacritty/
 - synchronize: src=templates/.bin/ dest=~/.bin/

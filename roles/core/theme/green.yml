@@ -1,0 +1,10 @@
+color:
+  normal:
+    background: "#2F3D44"
+    highlight: "#16a085"
+  focus:
+    background: "#556064"
+    highlight: "#80FFF9"
+gtk:
+  theme: "Adapta-Nokto-Eta-Maia"
+  icon: "Papirus-Adapta-Maia"

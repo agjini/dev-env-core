@@ -1,0 +1,10 @@
+color:
+  normal:
+    background: "#2F3D44"
+    highlight: "#3498db"
+  focus:
+    background: "#496d86"
+    highlight: "#53baea"
+gtk:
+  theme: "Matcha-dark-azul"
+  icon: "Papirus"
