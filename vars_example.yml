@@ -6,5 +6,5 @@ username: "Augustin Gjini"
 # Enable following variable to configure nvidia external GPU
 # egpu: false
 
-# Switch the manjaro i3 theme : green (default), blue
+# Switch the manjaro i3 theme (which apply to : i3, Xresources and lightdm) : green, blue
 # theme: green

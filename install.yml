@@ -4,6 +4,7 @@
 - hosts: localhost
   vars:
     egpu: false
+    theme: "green"
   roles:
      - core
   vars_files:
