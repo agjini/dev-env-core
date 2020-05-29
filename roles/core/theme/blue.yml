@@ -4,7 +4,7 @@ color:
     highlight: "#3498db"
   focus:
     background: "#496d86"
-    highlight: "#53baea"
+    highlight: "#FDF6E3"
 gtk:
   theme: "Matcha-dark-azul"
   icon: "Papirus"
