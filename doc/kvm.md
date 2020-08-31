@@ -23,3 +23,6 @@ UPDATE: Then I move to:
 - And network(internet from host) works
 - I can access my VM IP from the guest
 
+### Copy-paste Host <=> Guest:
+- Install https://www.spice-space.org/downloads/binaries/spice-guest-tools/ lastest version
+Mine is 2018-01-04 not so up to date but works perfectly
