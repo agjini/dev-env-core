@@ -55,6 +55,7 @@
 |`Ctrl` + `Alt` + `🠇` | Move line down/up |
 |`Ctrl` + `/` | Comment lines |
 |`F2` | Next error/warning |
+|`Alt` + `inser` | constructor, generate ... |
 
 # Git
 
