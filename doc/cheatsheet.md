@@ -54,6 +54,7 @@
 |`Ctrl` + `Alt` + `o` | Organize imports |
 |`Ctrl` + `Alt` + `🠇` | Move line down/up |
 |`Ctrl` + `/` | Comment lines |
+|`F2` | Next error/warning |
 
 # Git
 
