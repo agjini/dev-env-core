@@ -50,6 +50,10 @@
 |`Ctrl` + `Shift` + `n` | search for a file |
 |`Ctrl` + `z` | undo |
 |`Ctrl` + `Shift` + `z` | redo |
+|`Ctrl` + `Alt` + `l` | Format/indent code |
+|`Ctrl` + `Alt` + `o` | Organize imports |
+|`Ctrl` + `Alt` + `🠇` | Move line down/up |
+|`Ctrl` + `/` | Comment lines |
 
 # Git
 
