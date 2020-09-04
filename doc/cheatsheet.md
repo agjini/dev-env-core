@@ -55,6 +55,8 @@
 |`Ctrl` + `Alt` + `🠇` | Move line down/up |
 |`Ctrl` + `/` | Comment lines |
 |`F2` | Next error/warning |
+|`Ctrl` + `Alt` + `v` | Extract variable |
+|`Ctrl` + `Alt` + `m` | Extract method |
 
 # Git
 
