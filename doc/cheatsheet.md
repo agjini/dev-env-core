@@ -55,7 +55,9 @@
 |`Ctrl` + `Alt` + `🠇` | Move line down/up |
 |`Ctrl` + `/` | Comment lines |
 |`F2` | Next error/warning |
-|`Alt` + `inser` | constructor, generate ... |
+|`Alt` + `inser` | Generate constructor, equality members, ... |
+|`Ctrl` + `Alt` + `v` | Extract variable |
+|`Ctrl` + `Alt` + `m` | Extract method |
 
 # Git
 
