@@ -12,16 +12,29 @@ For the rest, just follow this doc, it's awesome:
 
 ## Create your VM:
 ### Network:
-Default selected Network source doesn't work (for Windows 10 in my case)  
+
 - You'll need to select (in hardware: NIC:8d:68:92 for example):
-    - Network source: Host device eno2: macvtap
+    - Network source: Virtual network 'default': NAT
     - Source mode: Bridge
     - Device Model: e1000e
 
-UPDATE: Then I move to:
-- Network source: Virtual network 'default': NAT 
-- And network(internet from host) works
-- I can access my VM IP from the guest
+#### Troubleshoot:
+
+If this Network source does not work (no internet access), it might probably works with: 
+- Network source: Host device eno2: macvtap
+
+BUT you'll need to select "Virtual network 'default': NAT" later to be able to ping your guest from host.
+- When selecting NAT if it's described as:
+    - Virtual network 'default'(inactive): NAT => network default is not active
+Check if it is activated:
+```bash
+sudo virsh net-list --all
+```
+If the list is empty, then run:
+```bash
+sudo virsh net-autostart default
+```
+To enable on PC start.
 
 ### Copy-paste Host <=> Guest:
 - Install https://www.spice-space.org/downloads/binaries/spice-guest-tools/ lastest version
