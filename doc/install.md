@@ -39,6 +39,22 @@ sudo rmmod pcspkr
 sudo echo blacklist pcspkr >> /etc/modprobe.d/nobeep.conf
 ```
 
+The second line may not work with the following error:
+```bash
+-bash: /etc/modprobe.d/nobeep.conf: Permission denied
+````
+Why ? Because the command behind the redirection '>>' is done as a regular user.
+Then you need to execute this instead:
+```bash
+sudo sh -c "echo 'blacklist pcspkr' >> /etc/modprobe.d/nobeep.conf"
+```
+OR
+```bash
+echo 'blacklist pcspkr | sudo tee -a /etc/modprobe.d/nobeep.conf
+```
+'tee' command is very powerful for this kind of works.
+It reads data from stadard input and write to standard output and files.
+
 ### Install pulseaudio
 
 install_pulse
