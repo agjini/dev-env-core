@@ -1,0 +1,12 @@
+
+- name: Install numlockx ...
+  shell: pamac install --no-confirm numlockx
+  become: yes
+
+- name: Enable numlockx on X11 start
+  replace:
+    path: /etc/lightdm/lightdm.conf
+    regexp: '#greeter-setup-script='
+    replace: 'greeter-setup-script=/usr/bin/numlockx on'
+  become: yes
+  
