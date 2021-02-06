@@ -223,6 +223,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="Oracle VM Virtualbox Manager"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [title="Android Emulator - *"] floating enable border normal
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
