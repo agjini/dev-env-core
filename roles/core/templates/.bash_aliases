@@ -761,10 +761,9 @@ function memdex-check-sfr {
 }
 
 function pp {
-    if [[ "$(git diff)" -ne "" ]]; then
+    if [[ "$(git diff)" != "" ]]; then
         git stash && git pull && git push && git stash pop
     else 
         git pull && git push
     fi
 }
-
