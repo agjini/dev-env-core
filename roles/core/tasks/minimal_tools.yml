@@ -14,7 +14,10 @@
   become: yes
 
 - name: Remove unwanted tools ...
-  shell: pamac remove --no-confirm urxvt urxvt-perls bash-git-prompt
+  shell: |
+    pamac remove --no-confirm urxvt
+    pamac remove --no-confirm urxvt-perls
+    pamac remove --no-confirm bash-git-prompt
   become: yes
   ignore_errors: yes
 
