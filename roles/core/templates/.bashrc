@@ -12,6 +12,8 @@ source /usr/share/fzf/key-bindings.bash
 
 eval "$(starship init bash)"
 
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
 source ~/.bash_aliases
 
 
