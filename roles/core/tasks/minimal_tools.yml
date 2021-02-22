@@ -29,5 +29,5 @@
   shell: pamac build --no-confirm starship-bin
 
 - name: Replace  minimal tools ...
-  shell: rm /usr/bin/terminal && ln -s /usr/bin/alacritty /usr/bin/terminal
+  shell: rm -f /usr/bin/terminal && ln -s /usr/bin/alacritty /usr/bin/terminal
   become: yes
