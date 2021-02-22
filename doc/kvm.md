@@ -63,3 +63,6 @@ So now, 'default' network will start automatically on boot.
 ### Copy-paste Host <=> Guest:
 - Install https://www.spice-space.org/downloads/binaries/spice-guest-tools/ lastest version
 Mine is 2018-01-04 not so up to date but works perfectly
+
+### Shared folder:
+- https://www.guyrutenberg.com/2018/10/25/sharing-a-folder-a-windows-guest-under-virt-manager/
