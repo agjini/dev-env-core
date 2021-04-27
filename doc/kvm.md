@@ -66,3 +66,9 @@ Mine is 2018-01-04 not so up to date but works perfectly
 
 ### Shared folder:
 - https://www.guyrutenberg.com/2018/10/25/sharing-a-folder-a-windows-guest-under-virt-manager/
+
+### Resize your VM:
+For example `win10.qcow2` is my VM file, I added 10Go:
+```bash
+sudo qemu-img resize /var/lib/libvirt/images/win10.qcow2 +10G
+```
