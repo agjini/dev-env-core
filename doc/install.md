@@ -68,4 +68,4 @@ Enable AUR in pamac
 - nvm
 - docker
 - vscode
-- [kvm (for running virtual machine)](./kvm.md)
+- kvm (for running virtual machine), see https://github.com/Retaildrive/devops/blob/master/doc/kvm.md
