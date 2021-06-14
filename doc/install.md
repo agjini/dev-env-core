@@ -23,6 +23,7 @@ Basic commands for Vi :
 :w => write changes in the file
 :q => quit vi, only if there is no change
 :q! => discard changes and quit vi
+:wq => write and quit
 ```
 
 #### Run the install
