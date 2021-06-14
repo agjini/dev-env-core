@@ -4,7 +4,7 @@
 The tool is based on ansible. Which allow to be launched several time without doing all tasks that have been already done.
 
 ```bash
-pacman -S ansible
+sudo pacman -S ansible
 ```
 
 ## Install
@@ -16,6 +16,13 @@ Fills the variables in vars.yml (In the project directory)
 ```bash
 cp vars_example.yml vars.yml
 vi vars.yml
+```
+Basic commands for Vi :
+```vi
+:i => insertion mode, to write in the opened file
+:w => write changes in the file
+:q => quit vi, only if there is no change
+:q! => discard changes and quit vi
 ```
 
 #### Run the install
@@ -59,7 +66,7 @@ It reads data from stadard input and write to standard output and files.
 
 install_pulse
 
-In sound tray icon set `pavucontrol` as mixer
+In sound tray icon, open 'Preferences', go to 'Status Icon' tab and set 'External mixer' to `pavucontrol`
 
 ### Install following software :
 
