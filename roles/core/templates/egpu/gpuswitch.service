@@ -1,9 +1,0 @@
-[Unit]
-     Description=Script to detect and switch between Integrated Graphics and External GPU
-     Wants=bolt.service
-
-[Service]
-     ExecStart=/usr/bin/gpuswitch.sh
-
-[Install]
-     WantedBy=multi-user.target
