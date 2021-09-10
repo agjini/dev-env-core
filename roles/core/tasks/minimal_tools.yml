@@ -22,11 +22,8 @@
   ignore_errors: yes
 
 - name: Install minimal tools ...
-  shell: pamac install --no-confirm tmux httpie jq alacritty noto-fonts-emoji z
+  shell: pamac install --no-confirm tmux httpie jq alacritty noto-fonts-emoji z starship
   become: yes
-
-- name: Install minimal tools from AUR...
-  shell: pamac build --no-confirm starship-bin
 
 - name: Replace  minimal tools ...
   shell: rm -f /usr/bin/terminal && ln -s /usr/bin/alacritty /usr/bin/terminal
