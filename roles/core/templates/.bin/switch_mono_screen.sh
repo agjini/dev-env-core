@@ -4,8 +4,8 @@ getActiveMonitorsCount() {
     xrandr --listactivemonitors | head -1 | awk '{ print$2 }'
 }
 
-getActiveMonitors() {
-    xrandr --listactivemonitors | tail -n+2 | awk '{ print$4 }'
+getActiveMonitorsExceptFirst() {
+    xrandr --listactivemonitors | tail -n+3 | awk '{ print$4 }'
 }
 
 if [ "$(getActiveMonitorsCount)" -gt 0 ]; then
@@ -17,19 +17,10 @@ if [ "$(getActiveMonitorsCount)" -gt 0 ]; then
 
     else
 
-        echo "Switching from multi screen to mono"
-
-        local i=0
-        for value in $(getActiveMonitors)
+        for value in $(getActiveMonitorsExceptFirst)
         do
-            if [ "${i}" = "0" ]; then
-                xrandr --output "${value}" --auto --primary
-            else
-                xrandr --output "${value}" --off
-            fi;
-            i=$(expr $i + 1)
+            xrandr --output "${value}" --off
         done
-
 
     fi;
 

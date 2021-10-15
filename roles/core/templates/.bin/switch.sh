@@ -10,7 +10,7 @@ isConnected() {
 
 isActive() {
     local monitor=${1}
-    xrandr --listactivemonitors | grep ${monitor} > /dev/null 2>&1
+    xrandr --listactivemonitors | grep "${monitor}" > /dev/null 2>&1
     echo $?
 }
 
@@ -26,13 +26,13 @@ autoConfigure() {
     local monitor2=${3}
 
     if [ "$(isActive ${monitor1})" = "0" ] || [ "$(isConnected ${monitor1})" = "1" ]; then
-        xrandr --output ${laptop} --auto --primary
-        xrandr --output ${monitor1} --off
-        xrandr --output ${monitor2} --off
+        xrandr --output "${monitor1}" --off
+        xrandr --output "${monitor2}" --off
+        xrandr --output "${laptop}" --auto --primary
     else
-        xrandr --output ${monitor1} --auto --primary 
-        xrandr --output ${monitor2} --auto --right-of ${monitor1} 
-        xrandr --output ${laptop} --off
+        xrandr --output "${laptop}" --off
+        xrandr --output "${monitor1}" --auto --primary
+        xrandr --output "${monitor2}" --auto --right-of "${monitor1}"
     fi;
 }
 
