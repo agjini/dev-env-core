@@ -1,22 +1,36 @@
 #!/bin/bash
 
-isDocked() {
-    # Is here to force to rediscover available displays
-    # And check if there is other monitors that laptop connected
-    xrandr -q | grep -v "eDP-1 connected" | grep " connected" > /dev/null 2>&1
-    echo $?
+getActiveMonitorsCount() {
+    xrandr --listactivemonitors | head -1 | awk '{ print$2 }'
 }
 
-echo $(isDocked)
+getActiveMonitors() {
+    xrandr --listactivemonitors | tail -n+2 | awk '{ print$4 }'
+}
 
-if [ "$(isDocked)" = "0" ]; then
+if [ "$(getActiveMonitorsCount)" -gt 0 ]; then
 
-    echo "docked"
-    ~/.bin/dock_home.sh
+    if [ "$(getActiveMonitorsCount)" == 1 ]; then
 
-else
+        echo "Switching from mono screen to multi"
+        ~/.bin/switch.sh
 
-    echo "undocked"
-    ~/.bin/laptop.sh
+    else
+
+        echo "Switching from multi screen to mono"
+
+        local i=0
+        for value in $(getActiveMonitors)
+        do
+            if [ "${i}" = "0" ]; then
+                xrandr --output "${value}" --auto --primary
+            else
+                xrandr --output "${value}" --off
+            fi;
+            i=$(expr $i + 1)
+        done
+
+
+    fi;
 
 fi;

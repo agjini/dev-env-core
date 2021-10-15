@@ -4,8 +4,8 @@ getActiveMonitorsCount() {
     xrandr --listactivemonitors | head -1 | awk '{ print$2 }'
 }
 
-getFirstExternalMonitor() {
-    xrandr | grep " connected " | awk '{ print$1 }' | grep -v "eDP-1" | head -1
+getActiveMonitors() {
+    xrandr --listactivemonitors | tail -n+2 | awk '{ print$4 }'
 }
 
 if [ "$(getActiveMonitorsCount)" -gt 0 ]; then
@@ -19,19 +19,17 @@ if [ "$(getActiveMonitorsCount)" -gt 0 ]; then
 
         echo "Switching from multi screen to mono"
 
-        xrandr --output eDP-1 --off
+        local i=0
+        for value in $(getActiveMonitors)
+        do
+            if [ "${i}" = "0" ]; then
+                xrandr --output "${value}" --auto --primary
+            else
+                xrandr --output "${value}" --off
+            fi;
+            i=$(expr $i + 1)
+        done
 
-        xrandr --output DP-1-1 --off
-        xrandr --output DP-1-2 --off
-
-        xrandr --output HDMI-0 --off
-        xrandr --output HDMI-1 --off
-        xrandr --output HDMI-2 --off
-
-        xrandr --output DP-2-1 --off
-        xrandr --output DP-2-2 --off
-
-        xrandr --output $(getFirstExternalMonitor) --auto --primary
 
     fi;
 
