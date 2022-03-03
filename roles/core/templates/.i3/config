@@ -332,7 +332,7 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 bar {
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango: FontAwesome 14
     position bottom
     status_command i3status-rs ~/.i3/config.toml
     colors {

@@ -1,5 +1,11 @@
-theme = "solarized-dark"
-icons = "awesome"
+[theme]
+name = "dracula"
+[theme.overrides]
+idle_bg = "#123456"
+idle_fg = "#abcdef"
+
+[icons]
+name = "awesome"
 
 [[block]]
 block = "disk_space"
