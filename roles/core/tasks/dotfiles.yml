@@ -14,6 +14,7 @@
   become: yes
   
 - template: src=templates/.i3/config dest=~/.i3/
+- template: src=templates/.i3/config.toml dest=~/.i3/
 - template: src=templates/alacritty.yml dest=~/.config/alacritty/
 - template: src=templates/fonts.conf dest=~/.config/fontconfig/
 - template: src=templates/starship.toml dest=~/.config/
