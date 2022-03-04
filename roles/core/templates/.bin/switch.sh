@@ -34,6 +34,7 @@ autoConfigure() {
         xrandr --output "${monitor1}" --auto --primary
         xrandr --output "${monitor2}" --auto --right-of "${monitor1}"
     fi;
+    killall dunst
 }
 
 
