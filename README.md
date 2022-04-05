@@ -21,4 +21,4 @@ The tools has been tested on `Manjaro Linux` i3 distribution
 ## Custom your i3 settings
 
 You can edit your ~/.i3/config file (see web documentation)
-To manage your worksapace display, search for `Workspace names` in this file, and set for example `set $ws1 1:` the  is an icon. You can found [more icons here](./icons). Fell free to complete it! :rocket
+To manage your worksapaces display, search for `Workspace names` in this file, and set for example `set $ws1 1:` the  is an icon. You can found [more icons here](./icons). Fell free to complete it!
