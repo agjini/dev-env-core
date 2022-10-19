@@ -54,12 +54,13 @@
 
 [push]
     default = tracking
+    autoSetupRemote = true
 
 [pull]
     rebase = true
 
 [rerere]
-        enabled = true
+    enabled = true
 
 [include]
-path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
