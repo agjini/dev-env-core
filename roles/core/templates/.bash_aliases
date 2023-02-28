@@ -771,6 +771,10 @@ function pp {
 function dvm {
     if [[ $# -lt 1 ]] ; then
         echo 'Usage:   dvm <version>'
+        
+        echo Current : `readlink -f /home/agjini/applications/dotnet`
+
+        echo Available :
         ls  ~/applications/dotnet-* | grep 'dotnet-.*'
         echo
         return;
