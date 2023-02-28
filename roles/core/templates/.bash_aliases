@@ -767,3 +767,18 @@ function pp {
         git pull && git push
     fi
 }
+
+function dvm {
+    if [[ $# -lt 1 ]] ; then
+        echo 'Usage:   dvm <version>'
+        ls  ~/applications/dotnet-* | grep 'dotnet-.*'
+        echo
+        return;
+    fi
+
+    local version=${1}
+
+    rm -f ~/applications/dotnet
+    ln -s ~/applications/dotnet-${version} ~/applications/dotnet
+    dotnet --info
+}
