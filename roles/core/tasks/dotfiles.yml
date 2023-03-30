@@ -14,7 +14,6 @@
   become: yes
   
 - template: src=templates/.i3/config dest=~/.i3/
-- template: src=templates/.i3/config.toml dest=~/.i3/
 - template: src=templates/alacritty.yml dest=~/.config/alacritty/
 - template: src=templates/fonts.conf dest=~/.config/fontconfig/
 - template: src=templates/starship.toml dest=~/.config/
@@ -24,3 +23,6 @@
 - template: src=templates/.tmux.conf dest=~/.tmux.conf
 - template: src=templates/.Xresources dest=~/.Xresources
 - template: src=templates/.vimrc dest=~/.vimrc
+
+- template: src=templates/.i3/config.toml dest=~/.i3/
+  when: rustbar

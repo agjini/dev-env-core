@@ -25,6 +25,11 @@
   shell: pamac install --no-confirm tmux httpie jq alacritty noto-fonts-emoji z starship i3status-rust rofi flameshot
   become: yes
 
-- name: Replace  minimal tools ...
+- name: Install rust bar ...
+  shell: i3status-rust
+  become: yes
+  when: rustbar
+
+- name: Replace minimal tools ...
   shell: rm -f /usr/bin/terminal && ln -s /usr/bin/alacritty /usr/bin/terminal
   become: yes

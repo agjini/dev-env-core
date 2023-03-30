@@ -4,8 +4,9 @@
 - hosts: localhost
   vars:
     egpu: false
+    rustbar: false
     theme: "blue"
   roles:
-     - core
+    - core
   vars_files:
     - vars.yml
