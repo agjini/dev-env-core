@@ -19,6 +19,7 @@ block = "battery"
 
 [[block]]
 block = "music"
+format = " $icon {$combo.str(max_w:20) $play $next |}"
 
 [[block]]
 block = "time"
