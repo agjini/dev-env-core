@@ -5,3 +5,15 @@ username: "Augustin Gjini"
 
 # Switch the manjaro i3 theme (which apply to : i3, Xresources and lightdm) : green, blue
 # theme: blue
+
+# i3 workspaces
+# workspaces:
+#   - "1:"
+#   - "2:"
+#   - "3:"
+#   - "4:"
+#   - "5:"
+#   - "6:"
+#   - "7"
+#   - "8"
+#   - "9"
