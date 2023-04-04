@@ -22,13 +22,8 @@
   ignore_errors: yes
 
 - name: Install minimal tools ...
-  shell: pamac install --no-confirm tmux httpie jq alacritty noto-fonts-emoji z starship i3status-rust rofi flameshot
+  shell: pamac install --no-confirm tmux httpie jq alacritty noto-fonts-emoji z starship rofi flameshot i3status-rust
   become: yes
-
-- name: Install rust bar ...
-  shell: i3status-rust
-  become: yes
-  when: rustbar
 
 - name: Replace minimal tools ...
   shell: rm -f /usr/bin/terminal && ln -s /usr/bin/alacritty /usr/bin/terminal

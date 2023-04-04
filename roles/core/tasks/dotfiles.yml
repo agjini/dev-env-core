@@ -24,5 +24,4 @@
 - template: src=templates/.Xresources dest=~/.Xresources
 - template: src=templates/.vimrc dest=~/.vimrc
 
-- template: src=templates/.i3/config.toml dest=~/.i3/
-  when: rustbar
+- template: src=templates/.i3/config.toml dest=~/.i3/ force=no
