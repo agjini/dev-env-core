@@ -337,7 +337,7 @@ bar {
         font pango: Inconsolata, FontAwesome, Icons 14
 	i3bar_command i3bar
         
-{% if i3_rs_bar %}
+{% if rustbar %}
         status_command i3status-rs ~/.i3/config.toml
 {% else %}
 	status_command i3status
