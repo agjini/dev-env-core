@@ -22,11 +22,11 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "FontAwesome 10";
-    background:                  #2F3D44;
-    background-alt:              #496d86;
-    foreground:                  #FDF6E3;
-    selected:                    #3498db;
-    active:                      #FDF6E3;
+    background:                  {{ theme.color.normal.background }};
+    background-alt:              {{ theme.color.focus.background }};
+    foreground:                  {{ theme.color.focus.highlight }};
+    selected:                    {{ theme.color.normal.highlight }};
+    active:                      {{ theme.color.focus.highlight }};
     urgent:                      #FEA861;
 }
 
