@@ -1,49 +1,58 @@
 #!/bin/bash
 
-isConnected() {
-    local monitor=${1}
-    # Is here to force to rediscover available displays
-    # And check if there is other monitors that laptop connected
-    xrandr -q | grep "${monitor} connected" > /dev/null 2>&1
-    echo $?
-}
-
 isActive() {
     local monitor=${1}
     xrandr --listactivemonitors | grep "${monitor}" > /dev/null 2>&1
     echo $?
 }
 
-# check if naming is eDP-1 or eDP1
-checkDisplayName() {
-    xrandr -q | grep eDP1 > /dev/null 2>&1
-    echo $?
+listConnectedMonitors() {
+    local monitorType=${1}
+
+    xrandr -q | grep " connected" | grep "^${monitorType}" | awk '{print $1}'
 }
 
 autoConfigure() {
-    local laptop=${1}
-    local monitor1=${2}
-    local monitor2=${3}
+    local laptop=$(listConnectedMonitors eDP)
+    local monitors=$(listConnectedMonitors DP) $(listConnectedMonitors HDMI)
 
-    if [ "$(isActive ${monitor1})" = "0" ] || [ "$(isConnected ${monitor1})" = "1" ]; then
-        xrandr --output "${monitor1}" --off
-        xrandr --output "${monitor2}" --off
-        xrandr --output "${laptop}" --auto --primary
-    else
+    if [ -z "${monitors}" ]; then
+        echo "No external monitor found, no change"
+        return;
+    fi;
+
+    echo "Find external monitors :"
+    for monitor in ${monitors}
+    do
+        echo "  - '${monitor}'"
+    done
+
+    if [ "$(isActive ${laptop})" = 0 ]; then
+
         xrandr --output "${laptop}" --off
-        xrandr --output "${monitor1}" --auto --primary
-        xrandr --output "${monitor2}" --auto --right-of "${monitor1}"
+
+        local previous=0
+        for monitor in ${monitors}
+        do
+            if [ "${previous}" = 0 ]
+            then
+                xrandr --output "${monitor}" --auto --primary
+            else
+                xrandr --output "${monitor}" --auto --right-of "${previous}"
+            fi
+            previous="${monitor}"
+        done
+
+    else
+        
+        for monitor in ${monitors}
+        do
+            xrandr --output "${monitor}" --off
+        done
+        xrandr --output "${laptop}" --auto --primary
+        
     fi;
     killall dunst
 }
 
-
-if [ "$(checkDisplayName)" = "0" ]; then
-
-    autoConfigure eDP1 DP1-1 DP1-2
-
-else
-
-    autoConfigure eDP1-1 DP1-1 DP1-2
-
-fi;
+autoConfigure
