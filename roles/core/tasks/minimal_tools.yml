@@ -22,7 +22,7 @@
   ignore_errors: yes
 
 - name: Install minimal tools ...
-  shell: pamac install --no-confirm tmux httpie jq alacritty noto-fonts-emoji z starship rofi flameshot i3status-rust playerctl
+  shell: pamac install --no-confirm tmux httpie jq alacritty noto-fonts-emoji z starship rofi flameshot i3status-rust playerctl awesome-terminal-fonts ttf-font-awesome
   become: yes
 
 - name: Replace minimal tools ...

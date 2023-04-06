@@ -350,6 +350,8 @@ bar {
         
 	strip_workspace_numbers no
 
+        padding 2
+
     colors {
         background #222D31
         statusline #F9FAF9
