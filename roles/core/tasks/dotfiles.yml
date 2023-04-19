@@ -24,7 +24,7 @@
 - template: src=templates/.tmux.conf dest=~/.tmux.conf
 - template: src=templates/.Xresources dest=~/.Xresources
 - template: src=templates/.vimrc dest=~/.vimrc
-- template: src=templates/dunstrc dest=~/.config/dunst
+- synchronize: src=templates/dunst/ dest=~/.config/dunst/
 
 - template: src=templates/rofi/config.rasi dest=~/.config/rofi/
 - template: src=templates/rofi/style-gugu.rasi dest=~/.config/rofi/
