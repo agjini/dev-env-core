@@ -15,7 +15,7 @@ The tools has been tested on `Manjaro Linux` i3 distribution
 ## Getting started
 
 1. [Install on Manjaro](./doc/install.md)
-2. [Print the cheat sheet](./doc/cheatsheet.md)
+2. [Print the cheat sheet](./doc/cheatsheet.md) (pour générer un pdf : `npx md-to-pdf --pdf-options '{"margin": "15mm 15mm"}' cheatsheet.md`)
 3. [Troubleshooting](./doc/troubleshooting.md)
 
 ## Custom your i3 settings
