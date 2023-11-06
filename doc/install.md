@@ -49,7 +49,9 @@ sudo sh -c "echo 'blacklist pcspkr' >> /etc/modprobe.d/nobeep.conf"
 
 ### Install pulseaudio
 
+```bash
 install_pulse
+```
 
 In sound tray icon, open 'Preferences' from Sound Mixer, go to 'Status Icon' tab and set 'External mixer' to `pavucontrol`
 
