@@ -4,7 +4,7 @@
 |---|---|
 |`Win` + `d`|display menu to launch an app |
 |`Win` + `0`| shutdown menu (logout, lock, rebbot, shutdown) |
-|`Win` + `d` | display menu to launch an app |
+|`Win` + `enter` | open teminal |
 |`Win` + `Shift` + `q` | close focused window |
 |`Win` + `<num>` | got to the `<num>` workspace |
 |`Win` + `Shift` + `<num>` | move focused window into the `<num>` workspace |
