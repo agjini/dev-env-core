@@ -30,6 +30,7 @@
 |`Ctrl` + `d` | exit current bash session |
 |`Ctrl` + `c` | stop or cancel current command |
 |`Ctrl` + `r` | search in command history |
+|`Ctrl` + `x` | page up and down to scroll in terminal |
 |`Alt` + `c` | search a relative directory and go into |
 `Ctrl` + `t` | search a relative file or directory and complete current command |
 |`Ctrl` + `a` | go to the line start |
