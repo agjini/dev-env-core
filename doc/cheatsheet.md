@@ -68,3 +68,4 @@
 |`git co` | git checkout |
 |`git ca` | git commit -am |
 |`git t` | git log of the current branch |
+|`pp`    | (stash)/pull/push/(stash pop) |
