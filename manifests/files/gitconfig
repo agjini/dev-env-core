@@ -19,6 +19,7 @@
     rb = rebaseé"&é&é&é"
     rbi = rebase -i
     force = push --force-with-lease
+    pp = "!sh -c 'stashed=0; if [ -n \"$(git status --porcelain)\" ]; then git stash push -u -m \"git pp auto-stash\" && stashed=1; fi; git pull --rebase && git push; rc=$?; [ \"$stashed\" = 1 ] && git stash pop; exit $rc'"
     log-stats = log --stat
     pretty-log = log --oneline --date-order --graph --all --decorate
     topo-log = log --oneline --graph --all --decorate
