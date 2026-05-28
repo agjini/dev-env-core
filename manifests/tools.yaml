@@ -1,0 +1,11 @@
+actions:
+  - action: package.install
+    provider: paru
+    list:
+      - pamac
+      - tmux
+      - httpie
+      - jq
+      - rio
+      - noto-fonts-emoji
+      - zoxide

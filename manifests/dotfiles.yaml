@@ -1,0 +1,19 @@
+depends:
+  - tools
+
+actions:
+  - action: command.run
+    command: python3
+    args:
+      - tools/blockinfile.py
+      - manifests/files/config.fish
+      - "{{ user.config_dir }}/fish/config.fish"
+
+  - action: file.copy
+    from: tmux.conf
+    to: "{{ user.home_dir }}/.tmux.conf"
+
+  - action: file.copy
+    from: gitconfig
+    to: "{{ user.home_dir }}/.gitconfig"
+    template: true

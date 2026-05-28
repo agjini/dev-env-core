@@ -1,0 +1,7 @@
+manifest_paths:
+  - manifests
+
+# Defaults — override via vars.yml (loaded as -D key=value by install.sh)
+variables:
+  email: "you@example.com"
+  username: "Your Name"
