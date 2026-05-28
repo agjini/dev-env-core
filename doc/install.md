@@ -21,7 +21,7 @@ $EDITOR vars.yml
 
 The script will:
 1. `git pull` to fetch the latest manifests
-2. Install `comtrya-bin` via `paru` if missing
+2. Install `comtrya` via `cargo` if missing
 3. Parse `vars.yml` into `-D key=value` flags
 4. Run `comtrya apply` — packages are installed via `paru` (sudo prompt) and dotfiles are written to `~`
 
@@ -29,4 +29,4 @@ The script will:
 
 This tool is greatly inspired from
 - Michaël Bitard works (tmux conf, bash aliases)
-- Development environment setup and good practices @ LivingObjects
+- Development environment setup and good practices @ LivingObjects & Synergee
