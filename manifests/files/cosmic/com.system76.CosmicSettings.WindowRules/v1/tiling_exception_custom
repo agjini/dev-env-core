@@ -1,0 +1,7 @@
+[
+  (
+    enabled: true,
+    appid: "org.gnome.Calculator",
+    title: "Calculator"
+  )
+]
