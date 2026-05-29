@@ -28,11 +28,24 @@ if [[ ! -f vars.yml ]]; then
 fi
 
 defines=()
+missing=()
 while IFS= read -r line; do
     [[ -z "$line" || "$line" =~ ^[[:space:]]*# ]] && continue
     if [[ "$line" =~ ^([a-zA-Z_][a-zA-Z0-9_]*):[[:space:]]*\"?([^\"]*)\"?[[:space:]]*$ ]]; then
-        defines+=(-D "${BASH_REMATCH[1]}=${BASH_REMATCH[2]}")
+        key="${BASH_REMATCH[1]}"
+        value="${BASH_REMATCH[2]}"
+        if [[ -z "$value" ]]; then
+            missing+=("$key")
+        else
+            defines+=(-D "$key=$value")
+        fi
     fi
 done < vars.yml
+
+if (( ${#missing[@]} > 0 )); then
+    echo "vars.yml is missing values for: ${missing[*]}" >&2
+    echo "Edit vars.yml and fill in every variable before re-running." >&2
+    exit 1
+fi
 
 comtrya "${defines[@]}" apply
