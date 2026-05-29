@@ -5,7 +5,21 @@ cd "$(dirname "$0")"
 
 if ! command -v comtrya &>/dev/null; then
     echo "Installing comtrya..."
-    cargo install comtrya
+    if command -v pacman &>/dev/null; then
+        if command -v paru &>/dev/null; then
+            paru -S --needed --noconfirm comtrya-bin
+        elif command -v yay &>/dev/null; then
+            yay -S --needed --noconfirm comtrya-bin
+        else
+            echo "No AUR helper found (paru/yay). Install one, or install comtrya-bin manually from the AUR." >&2
+            exit 1
+        fi
+    elif command -v cargo &>/dev/null; then
+        cargo install comtrya
+    else
+        echo "Cannot install comtrya: install an AUR helper (Arch) or cargo." >&2
+        exit 1
+    fi
 fi
 
 if [[ ! -f vars.yml ]]; then
@@ -21,4 +35,4 @@ while IFS= read -r line; do
     fi
 done < vars.yml
 
-comtrya -v "${defines[@]}" apply
+comtrya "${defines[@]}" apply
