@@ -48,4 +48,4 @@ if (( ${#missing[@]} > 0 )); then
     exit 1
 fi
 
-comtrya "${defines[@]}" apply
+comtrya -v "${defines[@]}" apply
