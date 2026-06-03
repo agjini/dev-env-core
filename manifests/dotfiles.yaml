@@ -15,7 +15,7 @@ actions:
 
   - action: directory.copy
     from: rio
-    to: "{{ user.home_dir }}/.config/rio"
+    to: "{{ user.home_dir }}/.config"
 
   - action: file.copy
     from: gitconfig
