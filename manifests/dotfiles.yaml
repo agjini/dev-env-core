@@ -13,6 +13,10 @@ actions:
     from: tmux.conf
     to: "{{ user.home_dir }}/.tmux.conf"
 
+  - action: directory.copy
+    from: rio
+    to: "{{ user.home_dir }}/.config/rio"
+
   - action: file.copy
     from: gitconfig
     to: "{{ user.home_dir }}/.gitconfig"

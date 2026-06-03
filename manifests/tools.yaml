@@ -9,3 +9,4 @@ actions:
       - rio
       - noto-fonts-emoji
       - zoxide
+      - zed

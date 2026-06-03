@@ -1,29 +1,25 @@
-## Install prerequisites
-
-The tool is based on [Comtrya](https://comtrya.dev/). It runs idempotent manifests so it can be replayed as many times as needed. `install.sh` will install Comtrya for you via `paru` (preinstalled on CachyOS).
-
 ## Install
 
-#### Fill your variables
-
-Fill in the variables in `vars.yml` (at the project root)
+_Check you are using the correct git branch '**cachy**'_
 
 ```bash
 cp vars_example.yml vars.yml
-$EDITOR vars.yml
 ```
 
-#### Run the install
+Edit `vars.yml` to fill your git variables
 
 ```bash
+vim vars.yml
+```
+
+```bash
+# Run (or re-run) the install to update your system
+# Can be run several time
+# Can take sometimes (~30s) the first time
 ./install.sh
 ```
 
-The script will:
-1. `git pull` to fetch the latest manifests
-2. Install `comtrya` via `cargo` if missing
-3. Parse `vars.yml` into `-D key=value` flags
-4. Run `comtrya apply` — packages are installed via `paru` (sudo prompt) and dotfiles are written to `~`
+_The script will update your system_
 
 ## Credits
 

@@ -1,0 +1,47 @@
+theme = "dracula"
+option-as-alt = 'left'
+confirm-before-quit = false
+use-fork = false
+
+[cursor]
+shape = 'block'
+blinking = true
+blinking-interval = 200
+
+[editor]
+program = "zed"
+args = []
+
+[window]
+decorations = "Disabled"
+opacity = 0.8
+blur = true
+
+[fonts]
+size = 20
+
+[fonts.emoji]
+family = "Noto Color Emoji"
+
+[navigation]
+current-working-directory = true
+
+[bindings]
+keys = [
+  # Clear screen and move cursor to home (ESC [ 2 J  ESC [ H)
+  # { key = "l", with = "control", esc = "\u001b[2J\u001b[H" },
+  # { key = "s", with = "control", action = "SearchBackward" },
+  # { key = "down", with = "shift", action = "CreateTab" },
+  # { key = "left", with = "shift", action = "SelectPrevTab" },
+  # { key = "right", with = "shift", action = "SelectNextTab" },
+  # { key = "left", with = "control | shift", action = "MoveCurrentTabToNext" },
+  # { key = "right", with = "control | shift", action = "MoveCurrentTabToPrev" },
+]
+
+[colors]
+tabs = '#12B5E5'
+tabs-foreground = '#7d7d7d'
+tabs-active = '#303030'
+tabs-active-highlight = '#ffa133'
+tabs-active-foreground = '#FFFFFF'
+bar = '#1b1a1a'
