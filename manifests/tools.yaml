@@ -10,3 +10,4 @@ actions:
       - noto-fonts-emoji
       - zoxide
       - zed
+      - git-interactive-rebase-tool-bin

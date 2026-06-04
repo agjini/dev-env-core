@@ -65,3 +65,6 @@
 
 [include]
     path = ~/.gitconfig.local
+
+[sequence]
+        editor = interactive-rebase-tool
