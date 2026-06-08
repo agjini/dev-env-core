@@ -18,7 +18,7 @@ opacity = 0.8
 blur = true
 
 [fonts]
-size = 20
+size = 18
 
 [fonts.emoji]
 family = "Noto Color Emoji"
